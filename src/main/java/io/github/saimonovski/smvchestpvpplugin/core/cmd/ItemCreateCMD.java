@@ -34,6 +34,7 @@ public class ItemCreateCMD implements Listener {
     static {
         ItemStack item = new ItemStack(Material.LEATHER);
         ItemMeta meta = item.getItemMeta();
+        assert meta != null;
         meta.setDisplayName(ChatUtils.fixColor("&2&lRare Items"));
         item.setItemMeta(meta);
 
@@ -116,8 +117,8 @@ public class ItemCreateCMD implements Listener {
     }
     @EventHandler
     public void onSelectRaritySetup(InventoryClickEvent e){
-        if(!e.getView().getTitle().equalsIgnoreCase(selectRarity.getTitle())) return;
-        if(!(e.getWhoClicked() instanceof Player) ) return;
+        if(!e.getView().getTitle().equals(selectRarity.getViewers().get(0).getOpenInventory().getTitle())) return;
+        if(!(e.getWhoClicked() instanceof Player)) return;
         e.setCancelled(true);
         Player p = (Player) e.getWhoClicked();
         int slot = e.getSlot();
@@ -138,20 +139,13 @@ public class ItemCreateCMD implements Listener {
     }
     @EventHandler
     public void onSetUpItemsDrop(InventoryCloseEvent e){
-        if(e.getInventory().getTitle().equals(rare.getTitle())){
-
-           Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.RARE, Instance.getData().getItems()));
-
-        } else if (e.getInventory().getTitle().equals(epic.getTitle())) {
+        if (e.getView().getTitle().equals(rare.getViewers().get(0).getOpenInventory().getTitle())) {
+            Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.RARE, Instance.getData().getItems()));
+        } else if (e.getView().getTitle().equals(epic.getViewers().get(0).getOpenInventory().getTitle())) {
             Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.EPIC, Instance.getData().getItems()));
-
-
-        } else if (e.getInventory().getTitle().equals(mythic.getTitle())) {
+        } else if (e.getView().getTitle().equals(mythic.getViewers().get(0).getOpenInventory().getTitle())) {
             Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.MYTHIC, Instance.getData().getItems()));
-
-
-
-        } else if (e.getInventory().getTitle().equals(legendary.getTitle())) {
+        } else if (e.getView().getTitle().equals(legendary.getViewers().get(0).getOpenInventory().getTitle())) {
             Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.LEGENDARY, Instance.getData().getItems()));
         }
     }
