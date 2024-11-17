@@ -31,15 +31,16 @@ public class ListenerInitalizer implements Listener {
     public void onChestCreator(BlockPlaceEvent e) {
         if (!e.canBuild()) return;
         Player p = e.getPlayer();
-        Block b = e.getBlock();
-        if (!b.getType().equals(Instance.getCreatorBlock().getType())) return;
+        Location loc = e.getBlock().getLocation();
+        e.setCancelled(true);
+        if(!e.getItemInHand().isSimilar(Instance.getCreatorBlock())) return;
 
         Data data = Instance.getData();
         List<DropChest> chestList = data.getChestList();
-        DropChest chest = new DropChest(b.getLocation());
+        DropChest chest = new DropChest(loc);
         chestList.add(chest);
         data.setChestList(chestList);
-        b.setType(Instance.getChestMaterial());
+        loc.getBlock().setType(Instance.getChestMaterial());
         
         p.sendMessage(ChatUtils.fixColor(Instance.getMessages().getChestCreatedMessage()));
     }
@@ -48,6 +49,7 @@ public class ListenerInitalizer implements Listener {
     public void onChestLooted(PlayerInteractEvent e) {
         if (!e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) return;
         Block block = e.getClickedBlock();
+
         Location location = block.getLocation();
 
         DropChest chest = findDropChestByLocation(location);
