@@ -19,10 +19,6 @@ blockCreator:
 chestConfiguration:
   material: CHEST
   title: "&4&lSMV-VerseCHests" #Title showed in the gui
-#How many maxium slots should be full, (max value is 27)
-maxSlotsInChest: 27
-#How many minimum slots should be full (min value is 0 && max value is 27)
-minSlotsInChest: 27
 #How long (in seconds) player must be wait before open the same chest twice
 chestCooldown: 3600
 

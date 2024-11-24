@@ -30,9 +30,9 @@ public class Config {
     private String chestTitle = "&6&lChestPVP";
 
 
-    private int minSlotsInChest = 3;
+//    private int minSlotsInChest = 3;
 
-    private int maxSlotsInChest = -1;
+//    private int maxSlotsInChest = -1;
 
     private int chestCooldown = 3600;
 
@@ -85,8 +85,8 @@ private void loadChestConfig(){
     chest = config.getEnum("chestConfiguration.material", Material.class);
 
     chestCooldown = config.getInt("chestCooldown");
-    minSlotsInChest = config.getInt("minSlotsInChests");
-    maxSlotsInChest = config.getInt("maxSlotsInChests");
+//    minSlotsInChest = config.getInt("minSlotsInChests");
+//    maxSlotsInChest = config.getInt("maxSlotsInChests");
 }
 private void loadChestCreator(){
     String itemName = config.getString("blockCreator.name");

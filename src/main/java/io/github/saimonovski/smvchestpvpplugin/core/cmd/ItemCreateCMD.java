@@ -23,10 +23,10 @@ import static io.github.saimonovski.smvchestpvpplugin.core.DataManage.Instance;
 
 public class ItemCreateCMD implements Listener {
     private static final Inventory selectRarity = Bukkit.createInventory(null, 9, ChatColor.DARK_PURPLE+"Select Rarity");
-    private static final Inventory rare = Bukkit.createInventory(null, 54, ChatColor.DARK_GREEN +"Rare Items");
-    private static final Inventory epic = Bukkit.createInventory(null, 54, ChatColor.LIGHT_PURPLE +"Epic Items");
-    private static final Inventory mythic = Bukkit.createInventory(null, 54, ChatColor.AQUA +"Mythic Items");
-    private static final Inventory legendary = Bukkit.createInventory(null, 54, ChatColor.GOLD +"Legendary Items");
+    private static final Inventory rare = Bukkit.createInventory(null, 54, ChatUtils.fixColor("&2&lRare Items"));
+    private static final Inventory epic = Bukkit.createInventory(null, 54, ChatUtils.fixColor("&d&lEpic Items"));
+    private static final Inventory mythic = Bukkit.createInventory(null, 54, ChatUtils.fixColor("&4&lMythic Items"));
+    private static final Inventory legendary = Bukkit.createInventory(null, 54, ChatUtils.fixColor("&6&lLegendary Items"));
 
     private enum Rarity{RARE,EPIC,MYTHIC,LEGENDARY}
 
