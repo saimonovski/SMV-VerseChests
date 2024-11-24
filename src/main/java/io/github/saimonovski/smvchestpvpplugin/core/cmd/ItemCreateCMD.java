@@ -141,11 +141,11 @@ public class ItemCreateCMD implements Listener {
     public void onSetUpItemsDrop(InventoryCloseEvent e){
         if (e.getView().getTitle().equals("&2&lRare Items")) {
             Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.RARE, Instance.getData().getItems()));
-        } else if (e.getView().getTitle().equals("&d&lEpic Items")) {
+        } else if (e.getView().getTitle().equals(ChatUtils.fixColor("&d&lEpic Items"))) {
             Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.EPIC, Instance.getData().getItems()));
-        } else if (e.getView().getTitle().equals("&4&lMythic Items")) {
+        } else if (e.getView().getTitle().equals(ChatUtils.fixColor("&4&lMythic Items"))) {
             Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.MYTHIC, Instance.getData().getItems()));
-        } else if (e.getView().getTitle().equals("&6&lLegendary Items")) {
+        } else if (e.getView().getTitle().equals(ChatUtils.fixColor("&6&lLegendary Items"))) {
             Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.LEGENDARY, Instance.getData().getItems()));
         }
     }
