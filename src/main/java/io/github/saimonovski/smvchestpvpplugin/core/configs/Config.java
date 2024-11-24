@@ -97,6 +97,7 @@ private void loadChestCreator(){
     meta.setDisplayName(ChatUtils.fixColor(itemName));
     lore.replaceAll(ChatUtils::fixColor);
     meta.setLore(lore);
+    item.setItemMeta(meta);
 }
 
 

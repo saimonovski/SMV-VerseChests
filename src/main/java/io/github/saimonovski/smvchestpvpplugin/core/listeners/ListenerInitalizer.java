@@ -30,18 +30,21 @@ public class ListenerInitalizer implements Listener {
     @EventHandler
     public void onChestCreator(BlockPlaceEvent e) {
         if (!e.canBuild()) return;
+        if(!e.getPlayer().hasPermission("smv.verse.chests.admin")) return;
         Player p = e.getPlayer();
         Location loc = e.getBlock().getLocation();
+        if(!e.getBlockPlaced().getType().equals(Instance.getCreatorBlock().getType())) return;
         e.setCancelled(true);
-        if(!e.getItemInHand().isSimilar(Instance.getCreatorBlock())) return;
-
+        if(!e.getItemInHand().isSimilar(Instance.getCreatorBlock())){ e.setCancelled(false); return;}
+        loc.getBlock().setType(Instance.getChestMaterial());
         Data data = Instance.getData();
         List<DropChest> chestList = data.getChestList();
         DropChest chest = new DropChest(loc);
         chestList.add(chest);
         data.setChestList(chestList);
-        loc.getBlock().setType(Instance.getChestMaterial());
-        
+        e.setCancelled(false);
+        loc.getWorld().getBlockAt(loc).setType(Instance.getChestMaterial());
+
         p.sendMessage(ChatUtils.fixColor(Instance.getMessages().getChestCreatedMessage()));
     }
 
@@ -139,7 +142,7 @@ public class ListenerInitalizer implements Listener {
         DropChest chest = findDropChestByLocation(loc);
         if (chest == null) return;
 
-        if (e.getPlayer().isSneaking() && e.getPlayer().isOp()) {
+        if (e.getPlayer().isSneaking() && e.getPlayer().hasPermission("smv.verse.chests.admin")) {
             Data data = Instance.getData();
             List<DropChest> chestList = data.getChestList();
             chestList.remove(chest);

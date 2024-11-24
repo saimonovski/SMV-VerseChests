@@ -82,10 +82,10 @@ public static   DataManage Instance;
         }
     }
     private void loadChestData() {
-
         chestMaterial = config.getChest();
-        if (!chestMaterial.isBlock()) {
+        if (!chestMaterial.isBlock() || chestMaterial.isAir()) {
             chestMaterial = Material.CHEST;
+        }
             for (DropChest chest : Instance.data.getChestList()) {
                 Location location = chest.getChestLocation();
 
@@ -96,7 +96,6 @@ public static   DataManage Instance;
             }
 
         }
-    }
     private void loadItems(){
         ItemsInChests it =  data.getItems();
         rareItems = it.getRare();

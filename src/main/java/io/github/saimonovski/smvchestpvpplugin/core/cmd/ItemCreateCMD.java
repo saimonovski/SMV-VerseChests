@@ -117,7 +117,7 @@ public class ItemCreateCMD implements Listener {
     }
     @EventHandler
     public void onSelectRaritySetup(InventoryClickEvent e){
-        if(!e.getView().getTitle().equals(selectRarity.getViewers().get(0).getOpenInventory().getTitle())) return;
+        if(!e.getView().getTitle().equals(ChatColor.DARK_PURPLE+"Select Rarity"))return;
         if(!(e.getWhoClicked() instanceof Player)) return;
         e.setCancelled(true);
         Player p = (Player) e.getWhoClicked();
@@ -139,13 +139,13 @@ public class ItemCreateCMD implements Listener {
     }
     @EventHandler
     public void onSetUpItemsDrop(InventoryCloseEvent e){
-        if (e.getView().getTitle().equals(rare.getViewers().get(0).getOpenInventory().getTitle())) {
+        if (e.getView().getTitle().equals("&2&lRare Items")) {
             Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.RARE, Instance.getData().getItems()));
-        } else if (e.getView().getTitle().equals(epic.getViewers().get(0).getOpenInventory().getTitle())) {
+        } else if (e.getView().getTitle().equals("&d&lEpic Items")) {
             Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.EPIC, Instance.getData().getItems()));
-        } else if (e.getView().getTitle().equals(mythic.getViewers().get(0).getOpenInventory().getTitle())) {
+        } else if (e.getView().getTitle().equals("&4&lMythic Items")) {
             Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.MYTHIC, Instance.getData().getItems()));
-        } else if (e.getView().getTitle().equals(legendary.getViewers().get(0).getOpenInventory().getTitle())) {
+        } else if (e.getView().getTitle().equals("&6&lLegendary Items")) {
             Bukkit.getScheduler().runTaskAsynchronously(SMV_VerseChests.getInstance(), () -> setup(e.getInventory().getContents(), Rarity.LEGENDARY, Instance.getData().getItems()));
         }
     }

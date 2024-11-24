@@ -3,7 +3,7 @@
 # Version: 2.0
 
 #Do not change this
-config-version: 2
+config-version: 3
 
 
 
@@ -28,18 +28,18 @@ chestCooldown: 3600
 
 #configuration of rarity items (chancee to drop etc.)
 rare:
-  chanceToDrop: 90 #In procent chance to drop item from this rarity setup
+  chanceToDrop: 100 #In procent chance to drop item from this rarity setup
   maxItems: 10 #How many max items should be displayed in the chest
   minItems: 2 #How many min items should be displayed in the chest
 epic:
-  chanceToDrop: 90 #In procent chance to drop item from this rarity setup
+  chanceToDrop: 100 #In procent chance to drop item from this rarity setup
   maxItems: 10 #How many max items should be displayed in the chest
   minItems: 2 #How many min items should be displayed in the chest
 mythic:
-  chanceToDrop: 90 #In procent chance to drop item from this rarity setup
+  chanceToDrop: 100 #In procent chance to drop item from this rarity setup
   maxItems: 10 #How many max items should be displayed in the chest
   minItems: 2 #How many min items should be displayed in the chest
 legendary:
-  chanceToDrop: 90 #In procent chance to drop item from this rarity setup
+  chanceToDrop: 100 #In procent chance to drop item from this rarity setup
   maxItems: 10 #How many max items should be displayed in the chest
   minItems: 2 #How many min items should be displayed in the chest
