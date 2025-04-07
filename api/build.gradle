@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group = 'io.github.saimonovski.versechest'
+version = '1.0- bukkit-1.8-1.20'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
