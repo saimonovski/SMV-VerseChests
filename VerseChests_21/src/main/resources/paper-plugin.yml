@@ -1,8 +1,0 @@
-name: VerseChests
-version: '1.0-SNAPSHOT'
-main: io.github.saimonovski.versechests.VerseChests_21
-api-version: '1.21'
-prefix: VERSECHESTS
-authors: [saimonovski, saimverse]
-description: Plugin for chestpvp chests, cretaed by https://saimverse.pl
-website: https://saimonovski.pl/ https://saimverse,pl

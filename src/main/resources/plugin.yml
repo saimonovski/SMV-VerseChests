@@ -1,6 +1,6 @@
 name: SMV-VerseChests
 version: '${version}'
-main: io.github.saimonovski.smvchestpvpplugin.SMV_VerseChests
+main: io.github.saimonovski.versechest.core.VerseChest
 prefix: SMV-VerseChests
 load: POSTWORLD
 author: saimonovski
