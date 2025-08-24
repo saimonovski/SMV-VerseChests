@@ -18,24 +18,25 @@ blockCreator:
 #Configuration a chest
 chestConfiguration:
   material: CHEST
-  title: "&4&lSMV-VerseCHests" #Title showed in the gui
+  title: "&4&lVerseCHests" #Title showed in the gui
 #How long (in seconds) player must be wait before open the same chest twice
 chestCooldown: 3600
 
 #configuration of rarity items (chancee to drop etc.)
-rare:
-  chanceToDrop: 100 #In procent chance to drop item from this rarity setup
-  maxItems: 10 #How many max items should be displayed in the chest
-  minItems: 2 #How many min items should be displayed in the chest
-epic:
-  chanceToDrop: 100 #In procent chance to drop item from this rarity setup
-  maxItems: 10 #How many max items should be displayed in the chest
-  minItems: 2 #How many min items should be displayed in the chest
-mythic:
-  chanceToDrop: 100 #In procent chance to drop item from this rarity setup
-  maxItems: 10 #How many max items should be displayed in the chest
-  minItems: 2 #How many min items should be displayed in the chest
-legendary:
-  chanceToDrop: 100 #In procent chance to drop item from this rarity setup
-  maxItems: 10 #How many max items should be displayed in the chest
-  minItems: 2 #How many min items should be displayed in the chest
+rarity:
+  rare:
+    chanceToDrop: 90 #In procent chance to drop item from this rarity setup
+    maxItems: 10 #How many max items should be displayed in the chest
+    minItems: 2 #How many min items should be displayed in the chest
+  epic:
+    chanceToDrop: 100 #In procent chance to drop item from this rarity setup
+    maxItems: 10 #How many max items should be displayed in the chest
+    minItems: 2 #How many min items should be displayed in the chest
+  mythic:
+    chanceToDrop: 100 #In procent chance to drop item from this rarity setup
+    maxItems: 10 #How many max items should be displayed in the chest
+    minItems: 2 #How many min items should be displayed in the chest
+  legendary:
+    chanceToDrop: 100 #In procent chance to drop item from this rarity setup
+    maxItems: 10 #How many max items should be displayed in the chest
+    minItems: 2 #How many min items should be displayed in the chest

@@ -1,1 +1,6 @@
 rootProject.name = 'SMV-ChestPvpPlugin'
+include 'api'
+
+
+include 'api'
+include 'core'
