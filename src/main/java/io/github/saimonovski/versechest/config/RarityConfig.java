@@ -1,15 +1,36 @@
 package io.github.saimonovski.versechest.config;
 
 public class RarityConfig {
-    private final MainConfig mainConfig;
-    private final int minItems, maxItems, maxItemsInChest, minItemsInChest;
+    private final int minItems, maxItems, maxItemsInChest, minItemsInChest, chanceToDrop;
 
-    public RarityConfig(MainConfig mainConfig, int minItems, int maxItems, int maxItemsInChest, int minItemsInChest) {
-        this.mainConfig = mainConfig;
+    public RarityConfig(MainConfig mainConfig, int minItems, int maxItems, int chanceToDrop) {
+        this.maxItemsInChest = mainConfig.getChestConfiguration().getMaxItems();
+        this.minItemsInChest = mainConfig.getChestConfiguration().getMinItems();
+        this.chanceToDrop = chanceToDrop;
 
         this.minItems = minItems;
         this.maxItems = maxItems;
-        this.maxItemsInChest = maxItemsInChest;
-        this.minItemsInChest = minItemsInChest;
+
+    }
+
+    public int getMinItems() {
+        return minItems;
+    }
+
+
+    public int getMaxItems() {
+        return maxItems;
+    }
+
+    public int getMaxItemsInChest() {
+        return maxItemsInChest;
+    }
+
+    public int getMinItemsInChest() {
+        return minItemsInChest;
+    }
+
+    public int getChanceToDrop() {
+        return chanceToDrop;
     }
 }

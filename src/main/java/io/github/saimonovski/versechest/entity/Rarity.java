@@ -1,15 +1,28 @@
 package io.github.saimonovski.versechest.entity;
 
 import io.github.saimonovski.versechest.config.RarityConfig;
+import org.jetbrains.annotations.NotNull;
 
+import java.util.Comparator;
 import java.util.Random;
 
-public record Rarity(RarityConfig conf) {
-    private final int minItems =
-    private final boolean isInvalidRange = minItems == maxItems || minItems > maxItems || maxItems < 0 || minItems <0
+public record Rarity(RarityConfig conf, String rarityName) implements Comparable<Rarity> {
+
     public int itemAmount(){
-        if(isInvalidRange) return maxItems;
+        int minItems =  conf.getMinItems();
+        int maxItems = conf.getMaxItems();
+
         Random random = new Random();
         return random.nextInt(minItems,maxItems);
+    }
+
+
+    @Override
+    public int compareTo(@NotNull Rarity rarity) {
+        return Comparator
+                .comparingInt((Rarity r) -> r.conf.getChanceToDrop())
+                .thenComparingInt(r -> r.conf.getMinItems())
+                .thenComparingInt(r -> r.conf.getMaxItems())
+                .compare(this, rarity);
     }
 }

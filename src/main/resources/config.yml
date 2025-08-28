@@ -26,6 +26,7 @@ chestConfiguration:
 chestCooldown: 3600
 
 #configuration of rarity items (chancee to drop etc.)
+# If you want to add your rarity just copy one of below sections and replace values
 rarity:
   rare:
     chanceToDrop: 90 #In procent chance to drop item from this rarity setup
