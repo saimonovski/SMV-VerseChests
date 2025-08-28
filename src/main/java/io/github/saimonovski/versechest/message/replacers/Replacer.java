@@ -1,4 +1,4 @@
-package io.github.saimonovski.versechest.messages.replacers;
+package io.github.saimonovski.versechest.replacers;
 
 import net.kyori.adventure.text.TextReplacementConfig;
 import org.bukkit.entity.Player;

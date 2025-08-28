@@ -1,4 +1,4 @@
-package io.github.saimonovski.versechest.core;
+package io.github.saimonovski.versechest;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class VerseChest extends JavaPlugin {

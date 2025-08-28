@@ -1,7 +1,7 @@
-package io.github.saimonovski.versechest.cloud;
+package io.github.saimonovski.versechest.command.register;
 
-import io.github.saimonovski.versechest.core.VerseChest;
-import io.github.saimonovski.versechest.api.Language;
+import io.github.saimonovski.versechest.VerseChest;
+import io.github.saimonovski.versechest.util.Language;
 import org.bukkit.command.CommandSender;
 import org.incendo.cloud.SenderMapper;
 import org.incendo.cloud.annotations.AnnotationParser;
@@ -12,10 +12,10 @@ import org.incendo.cloud.paper.LegacyPaperCommandManager;
 import java.util.Collection;
 import java.util.Set;
 
-public class CMDManager {
+public class CommandRegister {
     private final VerseChest plugin;
     private final Language language;
-    public CMDManager(VerseChest plugin, Language language) {
+    public CommandRegister(VerseChest plugin, Language language) {
         this.plugin = plugin;
         this.language = language;
         final LegacyPaperCommandManager<CommandSender> manager = new LegacyPaperCommandManager<>(

@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'io.github.saimonovski'
-version = '1.0- bukkit-1.8-1.20'
+version = '2.0 - paper 1.20+'
 
 repositories {
     mavenCentral()
@@ -48,7 +48,7 @@ dependencies {
     implementation "xyz.xenondevs.invui:invui:1.46"
 }
 
-def targetJavaVersion = 20
+def targetJavaVersion = 17
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion
@@ -62,7 +62,7 @@ tasks {
         // Configure the Minecraft version for our task.
         // This is the only required configuration besides applying the plugin.
         // Your plugin's jar (or shadowJar if present) will be used automatically.
-        minecraftVersion("1.20")
+        minecraftVersion("1.21.8")
     }
 }
 tasks.withType(JavaCompile).configureEach {
