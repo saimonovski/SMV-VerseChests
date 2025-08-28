@@ -1,5 +1,6 @@
-package io.github.saimonovski.versechest.messages;
+package io.github.saimonovski.versechest.message;
 
+import io.github.saimonovski.versechest.util.ChatUtil;
 import me.clip.placeholderapi.PlaceholderAPI;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;

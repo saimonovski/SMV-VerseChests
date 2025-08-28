@@ -1,4 +1,4 @@
-package io.github.saimonovski.versechest.core.entity;
+package io.github.saimonovski.versechest.entity;
 
 import java.time.Duration;
 import java.util.Map;

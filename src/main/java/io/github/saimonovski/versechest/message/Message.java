@@ -1,4 +1,4 @@
-package io.github.saimonovski.versechest.messages;
+package io.github.saimonovski.versechest.message;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextReplacementConfig;

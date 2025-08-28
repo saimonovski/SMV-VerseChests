@@ -3,26 +3,30 @@
 # Version: 2.0
 
 #Do not change this
-config-version: 3
-
-
+config-version: 4
+#do not change this also
+server-id: ""
 
 #Configuration of block using to create chests
-#permisja to
+
 blockCreator:
   material: BEDROCK
-  name: "&9&lCreatorBlock"
+  name: "<gold> <bold>CreatorBlock"
   lore:
-    - "&7Place in to create a chest"
-    - "7If you want to remove a chest destroy it while sneaking"
+    - "<white> Place in to create a chest"
+    - "<white> If you want to remove a chest destroy it while sneaking"
 #Configuration a chest
 chestConfiguration:
   material: CHEST
-  title: "&4&lVerseCHests" #Title showed in the gui
+  title: "<purple> <bold> VerseChests" #Title showed in the gui
+  minItems: 10
+  maxItems: 25
+  chestSize: 27
 #How long (in seconds) player must be wait before open the same chest twice
 chestCooldown: 3600
 
 #configuration of rarity items (chancee to drop etc.)
+# If you want to add your rarity just copy one of below sections and replace values
 rarity:
   rare:
     chanceToDrop: 90 #In procent chance to drop item from this rarity setup

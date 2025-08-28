@@ -1,17 +1,27 @@
 #Messages
 #Author: Saimonovski
-config-version: 3
+config-version: 4
 
-chestCreatorMessage: "&2Nadano kreator"
+chest-creator-message:
+  message: "<green> creator has been given"
+  type: CHAT
 
-noPermissionMessage: "&cBrak uprawnień!"
+changes-saved-message:
+  message: "<green> changes saved"
+  type: CHAT
 
-changesSavedMessage: "&aZmiany zostały zapisane."
+cooldown-message:
+  message: "<red> Wait <white> %player-cooldown%, before open this chest again"
+  type: CHAT
 
-coolDownMessage: "&ePoczekaj &f{PLAYER-REMAINING-COOLDOWN}, zanim otworzysz ta skrznie ponownie."
+chest-created-message:
+  message: "<green> Chest has been created."
+  type: CHAT
 
-chestCreatedMessage: "&2Skrzynia została utworzona."
+chest-looted-message:
+  message: "<gold> chest has been looted!"
+  type: CHAT
 
-chestLootedMessage: "&6Skrzynia została zlootowana!"
-
-chestRemovedMessage: "&6Skrzynia została usunieta!"
+chest-removed-message:
+  message: "<red> Chest has been removed!"
+  type: CHAT

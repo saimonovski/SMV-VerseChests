@@ -1,4 +1,4 @@
-package io.github.saimonovski.versechest.cloud;
+package io.github.saimonovski.versechest.command.register;
 
 
 import org.bukkit.command.CommandSender;

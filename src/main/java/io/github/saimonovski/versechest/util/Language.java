@@ -1,4 +1,4 @@
-package io.github.saimonovski.versechest.api;
+package io.github.saimonovski.versechest.util;
 
 public enum Language {
     POLISH,
